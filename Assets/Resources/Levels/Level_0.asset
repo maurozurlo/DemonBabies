@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc51584b1104fd24cb1b2d926e53510f, type: 3}
+  m_Name: Level_0
+  m_EditorClassIdentifier: 
+  levelNumber: 0
+  health: 5000
+  enemies: 5000
+  powerUps: 50
+  baseSpeed: 5
+  speedMultiplier: 10
+  maxSpeed: 55
+  timeBetweenSpawns: {x: 5, y: 8}
+  likehoodOfPowerUps: 20
+  enemyPrefabs:
+  - {fileID: 1665462897145196, guid: 11a238c1f30b1be4b97fb2ff3d3029a0, type: 3}
+  - {fileID: 1302054460483514, guid: 37c1bb4e440117f47b26ad49a1d3a88f, type: 3}
+  - {fileID: 1370622966266698, guid: 98e33559484d0e648a633e8af3275c31, type: 3}
+  enemyWeights:
+  - 95
+  - 4
+  - 1
+  powerupPrefabs:
+  - {fileID: 1557071077257632, guid: 46e499774eefd0f4292061e3ab95f7c6, type: 3}
+  - {fileID: 1854195941000310, guid: b169129e94551794985583c4805dd473, type: 3}
+  - {fileID: 1956484971024608, guid: 7ae3bf9719bee4443ac6de81dfcbaaeb, type: 3}
+  - {fileID: 1770352035602310, guid: 610ac22a2d354b741810f9bcd57ef39d, type: 3}
+  powerUpWeights:
+  - 50
+  - 95
+  - 50
+  - 50
+  music: {fileID: 8300000, guid: 070b2ed2745d68241a154eb3836ffdff, type: 3}
+  grass: {fileID: 2100000, guid: 94e8f466fdd6b2c41bbbad730c3e400c, type: 2}
+  skybox: {fileID: 2100000, guid: 2bd75610fec2b3940985d1dd4f6614b9, type: 2}
+  clouds: {fileID: 7930316680092744413, guid: 135d26d204a2f0340a753f2d6b197362, type: 3}
+  cameraPosition: {x: 0, y: 0, z: 9.24}
+  isUpsideDown: 0
+  hasFog: 0
+  fogColor: {r: 0, g: 0, b: 0, a: 0}
+  fogMode: 1
+  fogDensity: 0
+  hasParticleSpawner: 1
+  particleSpawner: {fileID: 1625808933804947645, guid: 14b7ab11fee095141926499b6805a608,
+    type: 3}
+  particleSpawnerPosition: {x: -0.3, y: -272, z: -21.8}
