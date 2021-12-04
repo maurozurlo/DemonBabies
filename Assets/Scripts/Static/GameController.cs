@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     int powerUpsActivated;
     [SerializeField]
-    int attempts;
+    int attempts = 1;
     [SerializeField]
     float levelTime;
     
@@ -273,6 +273,7 @@ public class GameController : MonoBehaviour {
 
     public void GoBackToMenu() {
         Time.timeScale = 1;
+        SendDataToContext(); // Save an attemp
         SceneManager.LoadScene("Menu");
     }
 

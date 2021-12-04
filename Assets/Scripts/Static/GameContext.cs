@@ -55,6 +55,8 @@ public class GameContext : MonoBehaviour {
 	}
 
 	int GetMaxUnlockedLevelFromSavedData() {
+		if (currentSavedData.playerData.hasFinishedTheGame == 1) return 1;
+
 		int temp = 0;
         for (int i = 0; i < currentSavedData.levelsData.Length; i++) {
 			LevelData levelData = currentSavedData.levelsData[i];

@@ -33,7 +33,7 @@ public class Baby : MovingTarget {
 
 	public override IEnumerator PlaySound(){
 		PlayOneShot (randSounds [Random.Range (0, randSounds.Length)]);
-		yield return new WaitForSeconds (Random.Range (0, intervalBetweenSounds));
+		yield return new WaitForSecondsRealtime(Random.Range (0, intervalBetweenSounds));
 		StartCoroutine ("PlaySound");
 	}
 

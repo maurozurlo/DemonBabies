@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 4
   health: 10
-  enemies: 20
-  powerUps: 2
+  enemies: 60
+  powerUps: 15
   baseSpeed: 10
   speedMultiplier: 1.2
-  maxSpeed: 14.4
-  timeBetweenSpawns: {x: 1, y: 3}
-  likehoodOfPowerUps: 40
+  maxSpeed: 24.5
+  timeBetweenSpawns: {x: 1, y: 2}
+  likehoodOfPowerUps: 65
   enemyPrefabs:
   - {fileID: 1665462897145196, guid: 11a238c1f30b1be4b97fb2ff3d3029a0, type: 3}
   - {fileID: 1302054460483514, guid: 37c1bb4e440117f47b26ad49a1d3a88f, type: 3}
@@ -35,11 +35,11 @@ MonoBehaviour:
   - {fileID: 1956484971024608, guid: 7ae3bf9719bee4443ac6de81dfcbaaeb, type: 3}
   - {fileID: 1770352035602310, guid: 610ac22a2d354b741810f9bcd57ef39d, type: 3}
   powerUpWeights:
-  - 80
-  - 10
+  - 70
+  - 20
   - 5
   - 5
-  music: {fileID: 8300000, guid: 1d7b920c303cfc845a0e4b268b53db18, type: 3}
+  music: {fileID: 8300000, guid: 38330bfd362ca274eb4619d82d7115de, type: 3}
   grass: {fileID: 2100000, guid: 04f8004c8f14d9f40a547324b5a35121, type: 2}
   skybox: {fileID: 2100000, guid: f2d7fb110091c2448a8f1fab293b3594, type: 2}
   clouds: {fileID: 0}

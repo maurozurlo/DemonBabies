@@ -82,6 +82,11 @@ public class MenuHandler : MonoBehaviour {
         panel.GetComponent<LoadSceneWithProgress>().LoadSceneNow("LevelGeneric");
     }
 
+    public void Continue()
+    {
+        LoadLevel(gameContext.GetMaxUnlockedLevel());
+    }
+
     public void ButtonClick() {
         if (!AS_FX.isPlaying && click != null) {
             AS_FX.PlayOneShot(click);

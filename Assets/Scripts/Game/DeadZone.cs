@@ -7,7 +7,6 @@ public class DeadZone : MonoBehaviour {
     public int probabilidad;
     public int lastTauntPlayed;
     public int prob;
-    int damageForThisLevel;
     public float delay;
     public int tauntToPlay;
     bool tauntsEnabled = true;
@@ -28,7 +27,7 @@ public class DeadZone : MonoBehaviour {
         if (col.CompareTag("Enemy")) {
             Baby baby = col.gameObject.GetComponent<Baby>();
             baby.ReachDestination();
-            GameController.control.TakeDamage(baby.damage, Color.red, "baby");
+            GameController.control.TakeDamage(baby.damage + ctx.currentLevel.levelNumber, Color.red, "baby");
             StartCoroutine("TryAndPlay");
         }
         else if (col.CompareTag("PowerUp")) {
@@ -48,7 +47,6 @@ public class DeadZone : MonoBehaviour {
     void PlayTaunt() {
         if (AS.isPlaying) return;
         tauntToPlay = Random.Range(0, adrielTaunts.Length);
-        //para que no se repitan los taunts
         if (tauntToPlay == lastTauntPlayed) {
             if (tauntToPlay + 1 < adrielTaunts.Length) {
                 lastTauntPlayed = tauntToPlay + 1;

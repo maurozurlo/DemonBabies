@@ -19,7 +19,7 @@ MonoBehaviour:
   baseSpeed: 5
   speedMultiplier: 1.2
   maxSpeed: 6
-  timeBetweenSpawns: {x: 1, y: 3}
+  timeBetweenSpawns: {x: 1, y: 5}
   likehoodOfPowerUps: 35
   enemyPrefabs:
   - {fileID: 1665462897145196, guid: 11a238c1f30b1be4b97fb2ff3d3029a0, type: 3}
