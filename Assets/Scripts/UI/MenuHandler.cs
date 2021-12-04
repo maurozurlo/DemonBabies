@@ -7,7 +7,7 @@ public class MenuHandler : MonoBehaviour {
     public Toggle tauntToggle;
     public Slider musicSlid, fxSlid;
     public AudioClip click;
-    public GameObject subtitle, HelpButton;
+    public GameObject subtitle, HelpButton, CreditsButton;
     // Start is called before the first frame update
     public GameObject[] panels;
     GameContext gameContext;
@@ -97,8 +97,9 @@ public class MenuHandler : MonoBehaviour {
         PlayerData _playerData = gameContext.GetGameData();
         long startTime = _playerData.startTime;
         int hasFinishedTheGame = _playerData.hasFinishedTheGame;
+        int hasSeenLoseCutscene = _playerData.hasSeenLoseCutscene;
         int taunt = tauntToggle.isOn ? 1 : 0;
-        PlayerData newPlayerData = new PlayerData(startTime, (int)fxSlid.value, (int)musicSlid.value, taunt, hasFinishedTheGame);
+        PlayerData newPlayerData = new PlayerData(startTime, (int)fxSlid.value, (int)musicSlid.value, taunt, hasFinishedTheGame, hasSeenLoseCutscene);
         gameContext.SavePlayerData(newPlayerData);
 
         AS_FX.volume = fxSlid.value / 10;
@@ -112,6 +113,7 @@ public class MenuHandler : MonoBehaviour {
         subtitle.SetActive(true);
         DisplayPanel("Main");
         HelpButton.SetActive(true);
+        CreditsButton.SetActive(true);
     }
 
     public void QuitApp() {

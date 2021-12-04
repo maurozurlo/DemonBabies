@@ -7,13 +7,15 @@ public class PlayerData {
 	public int musicVol;
 	public int taunts;
 	public int hasFinishedTheGame;
+	public int hasSeenLoseCutscene;
 
-	public PlayerData(long startTime, int fxVol, int musicVol, int taunts, int hasFinishedTheGame) {
+	public PlayerData(long startTime, int fxVol, int musicVol, int taunts, int hasFinishedTheGame, int hasSeenLoseCutscene) {
 		this.startTime = startTime;
 		this.fxVol = fxVol;
 		this.musicVol = musicVol;
 		this.taunts = taunts;
 		this.hasFinishedTheGame = hasFinishedTheGame;
+		this.hasSeenLoseCutscene = hasSeenLoseCutscene;
     }
 }
 [Serializable]

@@ -6,7 +6,7 @@ public class Bomb : PowerUpFX {
 
     public override void ActivateEffect() {
         int damageForThisLevel;
-        damageForThisLevel = damage * GameContext.control.GetCurrentLevel();
+        damageForThisLevel = damage + Mathf.FloorToInt(GameContext.control.GetCurrentLevel() * .5f);
         PowerUpFXManager powerUpFXManager = GetPowerUpFXManager();
 
         powerUpFXManager.DoDamage(damageForThisLevel, Color.red);

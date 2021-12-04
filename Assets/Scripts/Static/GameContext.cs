@@ -88,7 +88,7 @@ public class GameContext : MonoBehaviour {
 		else {
 			// Generate playerData for the first time
 			long currDate = (long)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalMilliseconds;
-			PlayerData playerData = new PlayerData(currDate, 10, 10, 1, 0);
+			PlayerData playerData = new PlayerData(currDate, 10, 10, 1, 0, 0);
 			LevelData[] levelData = { };
 			SaveData data = new SaveData(playerData, levelData);
 			SaveGameData(data);
